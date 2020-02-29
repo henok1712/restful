@@ -169,7 +169,7 @@
 		<repository>
             <id>central</id>
             <name>Craft Releases Repository</name>
-            <url>https://craftart1.jfrog.io/craftart1/libs-release/</url>
+            <url>C:\repoexample</url>
             <layout>default</layout>
 		</repository>
         
