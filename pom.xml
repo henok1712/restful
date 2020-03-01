@@ -75,7 +75,7 @@
 				<plugins>
 					<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
-					<artifactId>maven-source-plugin</artifactId>
+					<artifactId>maven-deploy-plugin</artifactId>
 					<configuration>
 					     <skip>true</skip>
 					</configuration>
