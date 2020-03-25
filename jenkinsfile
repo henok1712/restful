@@ -1,22 +1,17 @@
 pipeline{
 agent any
 stages {
-    stage ('build Application'){
+    stage ('Build Application'){
         steps {
         
             bat 'mvn clean install'
         }
     }
-    stage ('Test Application'){
-        steps{
-        
-            bat 'mvn clean test'
-        }
-    }
-    stage('Deploy Application'){
+
+    stage('Deploy Application Mulesoft Cloudhub'){
         steps {
     
-                   bat 'mvn clean deploy -Dmule.version=4.2.2 -Dusername=test -Dpassword=Trust124 -Denvironment=Sandbox -Dworkers=1 -Dworker.type=Micro -Dapplication.name=restfulProject '
+                   bat 'mvn clean package deploy -Dmule.version=4.2.2 -Danypoint.username=Nordic123 -Danypoint.password=Nordic123 -Denvironment=Sandbox -Dworkers=1 -Dcloudhub.workerType=Micro -Dapplication.name=restfulProject '
            
             }
         }
