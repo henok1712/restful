@@ -11,7 +11,7 @@ stages {
     stage('Deploy Application Mulesoft Cloudhub'){
         steps {
     
-                   bat 'mvn clean package deploy -Dmule.version=4.2.2 -Danypoint.username=Nordic123 -Danypoint.password=Nordic123 -Denvironment=Sandbox -Dworkers=1 -Dcloudhub.workerType=Micro -Dapplication.name=restfulProject '
+                   bat 'mvn clean package deploy -Danypoint.username=Nordic123 -Danypoint.password=Nordic123 -Dapplication.name=restfulProject -Denvironment=Sandbox -DworkerType=Micro -Dworkers=1 -Dmule.version=4.2.2   '
            
             }
         }
